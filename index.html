@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Far Countries &amp; Painefull Peregrinations — Thirteen Books, 1575–1796</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;600;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0b0b0d;
+  --ink-2:#131317;
+  --rule:#2a2a31;
+  --paper:#e8e6e0;
+  --dim:#8d8d99;
+  --yellow:#f5c518;
+  --cyan:#4dd8e0;
+  --red:#e0463c;
+  --display:"Big Shoulders Display",Impact,sans-serif;
+  --body:"Source Serif 4",Georgia,serif;
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--ink);color:var(--paper);
+  font-family:var(--body);font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--cyan);text-decoration:none;border-bottom:1px solid rgba(77,216,224,.3)}
+a:hover{border-bottom-color:var(--cyan)}
+a:focus-visible{outline:2px solid var(--yellow);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ---------- masthead ---------- */
+header{border-bottom:1px solid var(--rule);padding:76px 0 40px}
+.eyebrow{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--yellow);margin:0 0 22px
+}
+h1{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(3.2rem,10.5vw,8.2rem);line-height:.84;letter-spacing:-.01em;
+  margin:0;text-transform:uppercase;color:var(--paper)
+}
+h1 em{font-style:normal;color:var(--red)}
+.standfirst{
+  max-width:62ch;margin:30px 0 0;font-size:1.16rem;color:#c9c7c0;font-weight:300
+}
+.meta-rail{
+  display:flex;flex-wrap:wrap;gap:26px;margin-top:34px;
+  font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--dim)
+}
+.meta-rail b{color:var(--paper);font-weight:500}
+
+/* ---------- section heads ---------- */
+.section-head{
+  display:flex;align-items:baseline;gap:20px;
+  padding:74px 0 6px;border-bottom:1px solid var(--rule);margin-bottom:0
+}
+.section-head h2{
+  font-family:var(--display);font-weight:600;text-transform:uppercase;
+  font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:.02em;margin:0;color:var(--yellow)
+}
+.section-head .count{font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.15em}
+.section-note{
+  font-family:var(--mono);font-size:12.5px;color:var(--dim);line-height:1.7;
+  max-width:64ch;margin:16px 0 0
+}
+
+/* ---------- entries ---------- */
+.entry{
+  display:grid;grid-template-columns:132px 1fr;gap:34px;
+  padding:52px 0;border-bottom:1px solid var(--rule)
+}
+.spine{position:relative}
+.year{
+  font-family:var(--display);font-weight:800;font-size:3.5rem;line-height:.82;
+  color:var(--paper);letter-spacing:-.02em
+}
+.year span{display:block;color:var(--rule)}
+.spine .tag{
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dim);margin-top:14px;display:block;line-height:1.9
+}
+.spine .tag.route{color:var(--cyan)}
+
+.entry h3{
+  font-family:var(--display);font-weight:600;text-transform:uppercase;
+  font-size:clamp(1.55rem,3.6vw,2.35rem);line-height:1.02;letter-spacing:.005em;
+  margin:0 0 4px;color:var(--paper)
+}
+.byline{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--red);margin:0 0 26px
+}
+.field{margin:0 0 22px}
+.field-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--yellow);display:block;margin-bottom:7px
+}
+.field p{margin:0;max-width:70ch}
+.field p + p{margin-top:12px}
+
+/* ---------- links block ---------- */
+.reads{
+  border-left:2px solid var(--cyan);padding:2px 0 2px 18px;margin-top:26px
+}
+.reads .field-label{color:var(--cyan)}
+.read{margin:0 0 10px;font-family:var(--mono);font-size:12.5px;line-height:1.6}
+.read:last-child{margin-bottom:0}
+.read .kind{color:var(--dim);letter-spacing:.1em;text-transform:uppercase;font-size:10px;display:block}
+.read a{word-break:break-word}
+
+/* ---------- caveat callout ---------- */
+.caveat{
+  border:1px solid var(--red);border-left-width:3px;padding:18px 22px;margin-top:26px;
+  background:rgba(224,70,60,.055)
+}
+.caveat .field-label{color:var(--red)}
+.caveat p{margin:0;font-size:.95rem;color:#d6d3cc}
+
+/* ---------- footer ---------- */
+footer{padding:70px 0 90px}
+footer h2{
+  font-family:var(--display);font-weight:600;text-transform:uppercase;
+  font-size:1.7rem;color:var(--yellow);margin:0 0 18px
+}
+footer p{max-width:70ch;color:#c9c7c0;margin:0 0 14px}
+.colophon{
+  margin-top:46px;padding-top:22px;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)
+}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  header{padding:48px 0 32px}
+  .entry{grid-template-columns:1fr;gap:0;padding:42px 0}
+  .spine{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+  .year{font-size:2.6rem}
+  .year span{display:inline}
+  .spine .tag{margin-top:0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="eyebrow">A reading list · 1575–1796 · all texts freely available</p>
+    <h1>Far Countries<br>&amp; <em>Painefull</em><br>Peregrinations</h1>
+    <p class="standfirst">Thirteen books by men and women who went out to look at the world and came back with notebooks — plus a few who never left the desk and saw further than any of them. Nearly all are out of copyright and readable tonight, for nothing.</p>
+    <div class="meta-rail">
+      <span><b>13</b> titles</span>
+      <span><b>221</b> years covered</span>
+      <span><b>12</b> free in full</span>
+      <span><b>1</b> gap, flagged below</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ ON THE ROAD ============ -->
+  <div class="section-head">
+    <h2>On the road</h2>
+    <span class="count">Eight travellers</span>
+  </div>
+  <p class="section-note">Ordered by date of publication. The route line under each year is the shape of the journey, not the book.</p>
+
+  <!-- Coryat -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>11</span></div>
+      <span class="tag route">Odcombe → Venice → Odcombe</span>
+      <span class="tag">Mostly on foot</span>
+    </div>
+    <div>
+      <h3>Coryat's Crudities</h3>
+      <p class="byline">Thomas Coryat · c.1577–1617</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>An account of a single five-month walk through France, Savoy, Italy, the Grisons, Switzerland, parts of Germany and the Low Countries in 1608 — roughly 1,975 miles, much of it on foot, to Venice and back. Coryat measured things, copied down inscriptions, priced meals, described a Venetian courtesan's apartment and the mechanics of a public execution with the same flat curiosity. He is credited with bringing the table fork back to England, where it was treated as an affectation.</p>
+        <p>The full title runs on for a paragraph and calls the whole thing "hastily gobled up." The 1611 edition opens with dozens of mock-panegyric verses that his friends wrote to ridicule him, which he printed anyway.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A Somerset parson's son attached to the court of Henry, Prince of Wales, where he functioned as a licensed buffoon — the wit everyone laughed at rather than with. He hung his walking shoes in Odcombe church. He later walked to India and died at Surat.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Coryat invented a posture that English travel writing has never quite abandoned: the amateur who is funnier than his material and knows it. The self-mockery is armour. Underneath it he is doing something new and serious — reporting a foreign place by describing what is actually in front of him rather than what authority says should be.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the first great work of English travel journalism, and it shows the form being invented by someone with no institutional standing at all. Every reporter who has funded their own trip and turned the humiliation into copy is working in the Coryat tradition.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · vol. 1</span><a href="http://archive.org/stream/coryatscrudities01coryuoft/coryatscrudities01coryuoft_djvu.txt">archive.org/stream/coryatscrudities01coryuoft</a></p>
+        <p class="read"><span class="kind">Page scans · 1905 reprint of the 1611 edition</span><a href="https://archive.org/details/coryatscrudities01cory">archive.org/details/coryatscrudities01cory</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Moryson -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>17</span></div>
+      <span class="tag route">Twelve dominions · 1591–1597</span>
+      <span class="tag">Plus Ireland, 1600–06</span>
+    </div>
+    <div>
+      <h3>An Itinerary</h3>
+      <p class="byline">Fynes Moryson · 1566–1630</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Ten years of travel through Germany, Bohemia, Switzerland, the Netherlands, Denmark, Poland, Italy, Turkey, France, England, Scotland and Ireland, written first in Latin and then translated by the author into English. Three parts were printed; a fourth survives in manuscript at Corpus Christi College, Oxford.</p>
+        <p>What sets it apart is the accounting. Moryson records lodging rates, coach fares, the going bribe, the exchange on a Venetian ducat, what a meal cost in Nuremberg versus Padua, how much to pay a guide over the Alps and how to sew coins into your clothes so you still have them at the other end.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A Lincolnshire gentleman's son, fellow of Peterhouse, Cambridge, who secured a licence to travel and spent the 1590s using it. He later served as secretary to Lord Mountjoy in Ireland through Tyrone's rebellion, which gives the third part an eyewitness bite that the guidebook sections lack.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Moryson treats travel as an infrastructure problem. He is not chasing the sublime; he is documenting how a system of roads, currencies, inns, borders and customs officers actually functions for a person moving through it with limited money. The book is a map of friction.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the closest thing the period has to an operations manual, and therefore one of the best sources on the everyday economics of early modern Europe — the numbers that political history usually leaves out. It also happens to be the model for every piece of service journalism written since.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · vol. 1 (Europe)</span><a href="https://archive.org/stream/fynesmorysons01moryuoft/fynesmorysons01moryuoft_djvu.txt">archive.org/stream/fynesmorysons01moryuoft</a></p>
+        <p class="read"><span class="kind">Vol. 4 (Ireland)</span><a href="https://archive.org/details/fynesmorysons04moryuoft">archive.org/details/fynesmorysons04moryuoft</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Lithgow -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>32</span></div>
+      <span class="tag route">Scotland → Levant → Fez → Málaga</span>
+      <span class="tag">Nineteen years</span>
+    </div>
+    <div>
+      <h3>The Totall Discourse of the Rare Adventures and Painefull Peregrinations</h3>
+      <p class="byline">William Lithgow · 1582–1645?</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Three journeys over nineteen years, gathered into one volume: Italy and Greece, Constantinople, Jerusalem and Egypt; then Tunis and Fez; then Spain, where in 1620 he was arrested at Málaga as a spy and tortured by the Inquisition. He was repatriated broken and spent years petitioning for redress.</p>
+        <p>The prose is florid and the numbers are inflated — forty-eight kingdoms, two hundred islands — but the cultural and economic detail is real, from coffee-drinking to tattooing, and the torture chapter is one of the most harrowing first-person documents in English.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A burgess's son from Lanark with a grammar-school education and no patron worth the name — the least well-connected traveller on this list. He rewrote and reissued his account twice before the 1632 collected edition, which makes him unusually visible as a man constructing his own legend in public, in stages.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Lithgow is what happens when travel writing collides with grievance. The book is simultaneously a survey of the Mediterranean world, an anti-Catholic tract, an atrocity testimony and a claim for compensation, and it never resolves the tension between them.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>Read it as a case study in the reliability of eyewitness accounts. Because the successive editions survive, you can watch a witness revise himself — sharpening, embellishing, moving the emphasis toward what an audience will reward. That is a live problem for anyone assessing sourced testimony today.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · Project Gutenberg #61545</span><a href="https://www.gutenberg.org/files/61545/61545-h/61545-h.htm">gutenberg.org/files/61545/61545-h/61545-h.htm</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Olearius -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>62</span></div>
+      <span class="tag route">Holstein → Moscow → Isfahan</span>
+      <span class="tag">Embassy of 1633–39</span>
+    </div>
+    <div>
+      <h3>The Voyages and Travells of the Ambassadors</h3>
+      <p class="byline">Adam Olearius · 1603–1671 · trans. John Davies</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>The official record of a Holstein trade mission sent to open an overland silk route through Muscovy to Safavid Persia. The commercial objective failed completely. The reporting did not: seven books covering Russian law, religion, drinking, court protocol, marriage, punishment and commerce, then the same again for Persia, with maps and engravings. Davies's English edition appeared in 1662 and again in 1669, bundled with Mandelslo's continuation to India and the East Indies.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A German mathematician and scholar who served as secretary to the embassy, with Latin plus working Russian, Turkish and Persian. That language range is why the book has texture the other Persia accounts lack — he was not entirely dependent on interpreters, and he says so when he was.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>This is intelligence collection under commercial cover, and Olearius is unusually honest about the method: what he saw himself, what he was told, who told him, and where the two disagree. The failed mission is what makes the book good. Freed from having to justify a deal, he simply describes.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is a founding document of European knowledge about Russia — and a useful corrective to the idea that outside observation of Muscovy began in the nineteenth century. It is also the best single demonstration on this list that the by-product of a failed operation can outlast anything the operation was meant to produce.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Edited Persia selections · modernised, best entry point</span><a href="https://depts.washington.edu/silkroad/texts/olearius/travels.html">depts.washington.edu/silkroad/texts/olearius/travels.html</a></p>
+        <p class="read"><span class="kind">Complete 1669 folio · page scans</span><a href="https://archive.org/details/voyagestravellso00olea">archive.org/details/voyagestravellso00olea</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Della Valle -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>64</span></div>
+      <span class="tag route">Rome → Constantinople → Isfahan → Goa</span>
+      <span class="tag">Departed 1614, home 1626</span>
+    </div>
+    <div>
+      <h3>The Travels of Pietro della Valle</h3>
+      <p class="byline">Pietro della Valle · 1586–1652 · trans. G. Havers</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Fifty-four letters written on the road to a physician friend in Naples, covering Turkey, Egypt, the Holy Land, Mesopotamia, Persia and India. The Hakluyt Society reissued the 1664 English translation of the India letters in 1892 with notes; they are unusually good on religious practice, court politics and the small mechanics of daily life.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A Roman nobleman who left in 1614 on his doctor's advice, as an alternative to suicide after a failed love affair. In Mesopotamia in 1616 he married Sitti Maani Gioerida, an Assyrian Christian, who travelled with him until she died in Persia in 1622. He had her embalmed and carried her body through India and back to Rome, where he buried her in 1626 in the family vault at Aracoeli. He then married her Georgian companion and had fourteen sons.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>The letter form does something the itinerary form cannot: it lets grief and observation sit in the same paragraph without either cancelling the other. Della Valle is a serious ethnographer — the earliest sustained European account of the Keladi kingdom of south India is his — and simultaneously a man in an unmanageable private situation, writing to a friend.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the strongest argument on this list for the letter as a reporting format. Nothing else here is as good on what it costs, personally, to stay somewhere long enough to understand it.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · Hakluyt Society, 1892</span><a href="https://archive.org/stream/travelsofpietrod00dell/travelsofpietrod00dell_djvu.txt">archive.org/stream/travelsofpietrod00dell</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Evliya -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">c.16<span>83</span></div>
+      <span class="tag route">Istanbul → everywhere</span>
+      <span class="tag">Forty years, ten volumes</span>
+    </div>
+    <div>
+      <h3>Seyahatnâme — The Book of Travels</h3>
+      <p class="byline">Evliya Çelebi · 1611–c.1682 · trans. Joseph von Hammer-Purgstall</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Ten volumes covering forty years of movement across the Ottoman world and beyond it — Anatolia, the Balkans, Crimea, the Caucasus, Syria, Vienna, Egypt. Volume one is entirely Istanbul: its guilds, markets, mosques, criminals and processions, catalogued street by street. He also collected language specimens everywhere he went, preserving some thirty Turkic dialects.</p>
+        <p>There is still no complete English translation. Von Hammer's version, published 1834–50, covers volumes one and two and is the longest available; its English is antique.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>An Istanbul-born member of the Ottoman elite, trained as a Qur'an reciter, noticed by Sultan Murad IV for his voice and wit, who declined a court career in favour of forty years attached to one pasha's entourage after another. He opens the whole work by describing a dream in which the Prophet instructed him to travel and record.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>The single greatest corrective to reading this period only through European eyes. Evliya's world has its own centre, and Vienna is on the edge of it. He is also, flatly, an unreliable narrator — he exaggerates, invents, and describes places he cannot have visited — which makes the Seyahatnâme both a source and a permanent methodological problem.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the best available training exercise in reading a source that is simultaneously invaluable and untrustworthy. You cannot take him at his word and you cannot do without him, which is the ordinary condition of most human reporting.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Both volumes · searchable, bookmarked PDF</span><a href="https://archive.org/details/Travel17thEvliyaChelebi">archive.org/details/Travel17thEvliyaChelebi</a></p>
+        <p class="read"><span class="kind">Vol. 1 · higher-quality scan</span><a href="https://archive.org/details/narrativeoftrave01evli">archive.org/details/narrativeoftrave01evli</a></p>
+      </div>
+
+      <div class="caveat">
+        <span class="field-label">Worth paying for instead</span>
+        <p>Dankoff &amp; Kim's <em>An Ottoman Traveller</em> (2010) selects across all ten volumes with modern scholarship and readable English. If you want Evliya rather than a specimen of 1830s orientalism, buy that.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Basho -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">17<span>02</span></div>
+      <span class="tag route">Edo → Oku → Ōgaki</span>
+      <span class="tag">156 days, ~1,500 miles</span>
+    </div>
+    <div>
+      <h3>Oku no Hosomichi — The Narrow Road to the Deep North</h3>
+      <p class="byline">Matsuo Bashō · 1644–1694</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>A short prose-and-verse account of a journey Bashō took in 1689 with his companion Sora into the northern interior of Honshū — about 156 days and 1,500 miles, mostly walking. Published posthumously in 1702. Fifty pages that contain more than most of the folios above.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A samurai's son who became the pre-eminent poet of the Edo period, sold his house before leaving, and travelled deliberately to the places the old poets had written about — emulating Saigyō — in order to renew his own art rather than to discover anything.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>The exact inverse of the European projects here. Bashō is not gathering information; he is subtracting himself. The famous opening frames the traveller as already a passing figure among passing figures, and every place he reaches is measured against what a dead poet said about it. Travel as a discipline of attention, not acquisition.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>Put it directly beside Moryson's expense tables and the two books argue with each other across a century and eight thousand miles. That argument — is the point of going to record, or to be changed — is still the argument.</p>
+      </div>
+
+      <div class="caveat">
+        <span class="field-label">The one gap</span>
+        <p>There is no good public-domain English <em>Oku no Hosomichi</em>. Every translation worth reading — Yuasa (1966), Sato (1996), Hamill, Keene — is in copyright. The best free option is Tim Chilcott's parallel Japanese/English text, posted openly by the translator: <a href="http://www.tclt.org.uk/basho/Oku_2011.pdf">tclt.org.uk/basho/Oku_2011.pdf</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Wollstonecraft -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">17<span>96</span></div>
+      <span class="tag route">Gothenburg → Norway → Copenhagen</span>
+      <span class="tag">Three months, with an infant</span>
+    </div>
+    <div>
+      <h3>Letters Written During a Short Residence in Sweden, Norway, and Denmark</h3>
+      <p class="byline">Mary Wollstonecraft · 1759–1797</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Twenty-five letters drawn from her journal and from the letters she actually sent, describing a three-month journey through Scandinavia. Ostensibly a business trip: she was acting as agent for Gilbert Imlay, trying to trace a ship carrying stolen silver. That errand is barely mentioned. What fills the book is landscape, Norwegian rural society, the effects of commerce on character, and her own state of mind.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>Already the author of <em>A Vindication of the Rights of Woman</em>. She made the journey with her infant daughter and a maid, in the collapse of her relationship with Imlay, between two suicide attempts. Godwin said afterwards that if a book could make a man fall in love with its author, this was it; they married the following year.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Wollstonecraft turns the travel letter into an instrument for examining the self against unfamiliar terrain. She is scathing about commercial society — she thinks trade coarsens the people it enriches — and equally hard on her own tendency to console herself with scenery. The politics and the despair are not separable.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the hinge between Enlightenment observation and Romantic interiority, and it is radically underread next to the <em>Vindication</em>. It also remains one of the few books of its era in which a woman travels alone, with a child, and writes about the world rather than about the difficulty of being permitted to see it.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · Project Gutenberg #3529</span><a href="https://www.gutenberg.org/files/3529/3529-h/3529-h.htm">gutenberg.org/files/3529/3529-h/3529-h.htm</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- ============ AT THE DESK ============ -->
+  <div class="section-head">
+    <h2>At the desk</h2>
+    <span class="count">Five who stayed home</span>
+  </div>
+  <p class="section-note">The other half of the brief: books about how a person assembles a mind, sorts true from false, and looks hard at what is nearest.</p>
+
+  <!-- Cardano -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">15<span>75</span></div>
+      <span class="tag">Written 1575 · printed 1643</span>
+      <span class="tag route">Milan, Pavia, Bologna, Rome</span>
+    </div>
+    <div>
+      <h3>De Vita Propria Liber — The Book of My Life</h3>
+      <p class="byline">Girolamo Cardano · 1501–1576 · trans. Jean Stoner</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>An autobiography organised not as a narrative but as a set of inventories: his body, his teeth, his diet, his dreams, his gambling, his enemies, his errors, his books, the deaths in his family, the things he was good at and the things he was not. Written in his final year. First printed at Paris in 1643 by Gabriel Naudé, whose hostile preface shaped Cardano's reputation for the next two centuries.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>The illegitimate son of a Milanese lawyer who became one of the most celebrated physicians in Europe, published the first general solution to the cubic equation, wrote the earliest systematic treatment of probability out of his own gambling, cast horoscopes professionally, and was imprisoned by the Inquisition for casting one of Christ. His eldest son was executed for poisoning his wife.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Cardano turns the analytical apparatus he used on patients and card games onto himself, and does not flinch or arrange the results flatteringly. It is an early attempt at treating a single human life as a dataset — recorded honestly enough that the ugly entries stay in.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the least sentimental self-portrait in Renaissance literature, and a reminder that the same mind can hold rigorous probability theory and astrology at once without noticing a contradiction. Useful whenever you are tempted to assume that expertise in one domain travels.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · Stoner 1930 translation, now public domain</span><a href="https://archive.org/details/GirolamoCardanoTheBookOfMyLifeDeVitaPropriaLiber">archive.org/details/GirolamoCardanoTheBookOfMyLifeDeVitaPropriaLiber</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Burton -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>21</span></div>
+      <span class="tag">Five revisions to 1651</span>
+      <span class="tag route">Christ Church, Oxford</span>
+    </div>
+    <div>
+      <h3>The Anatomy of Melancholy</h3>
+      <p class="byline">Robert Burton · 1577–1640 · as "Democritus Junior"</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Nominally a medical treatise on the causes, symptoms and cures of melancholy. Actually more than half a million words that take in astronomy, geography, politics, love, war, religious mania, diet, digression as a method and the failings of scholars, assembled from thousands of quoted authorities. Burton kept enlarging it through five editions.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A librarian and vicar who spent almost his entire adult life inside Christ Church, Oxford, and never travelled anywhere. Everything in the book came off a shelf.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>The most complete surviving map of what one exceptionally well-read seventeenth-century person had in his head. Its structure — partitions, sections, members, subsections — promises a system and delivers an avalanche, and the gap between the two is the real subject. Burton knows he cannot get to the bottom of it and keeps going.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the founding text of the accumulate-everything mode: the commonplace book, the clipping file, the database that grows faster than it can be read. Anyone who maintains an archive against an uncertain future need recognises Burton immediately. It is also still the best book in English on depression.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">All three partitions · Project Gutenberg #10800</span><a href="https://www.gutenberg.org/ebooks/10800">gutenberg.org/ebooks/10800</a></p>
+        <p class="read"><span class="kind">Reading version, single HTML file</span><a href="https://www.gutenberg.org/files/10800/10800-h/10800-h.htm">gutenberg.org/files/10800/10800-h/10800-h.htm</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Peacham -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>22</span></div>
+      <span class="tag">Enlarged 1634</span>
+      <span class="tag route">A manual, not a memoir</span>
+    </div>
+    <div>
+      <h3>The Compleat Gentleman</h3>
+      <p class="byline">Henry Peacham · c.1578–1644?</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>The literal syllabus: what a gentleman should know and in what order. Chapters on classical learning, poetry, music, drawing and limning, painting, heraldry, coins and antiquities, exercise, military duty, fishing, reputation, and travel. Written as advice to a young nobleman's son. Reissued enlarged in 1634.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A Cambridge graduate, schoolmaster, emblem-book author and drawing instructor who spent his life several rungs below the people he was writing for — and who ended it, by most accounts, poor. The manual was written by an outsider describing the inside.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Read as a period document rather than as reading. It is the clearest single statement of what the era thought a broadened mind actually consisted of, and the ordering is the interesting part: antiquities and coin-collecting rank alongside music and poetry as serious intellectual work, while travel is a late chapter and faintly suspect.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>It is the specification against which every other book on this list can be measured — and most of them fail it, which is why they are better. Useful, too, as an early instance of an entire genre that has never gone away: the curriculum for self-improvement, written by someone selling admission to a room they are not in.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">First edition, 1622 · page scans</span><a href="https://archive.org/details/bim_early-english-books-1475-1640_the-compleat-gentleman_peacham-henry-the-youn_1622">archive.org · EEBO scan of the 1622 edition</a></p>
+        <p class="read"><span class="kind">1634 enlarged edition · more readable</span><a href="https://archive.org/details/cu31924093830358">archive.org/details/cu31924093830358</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Browne -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">16<span>58</span></div>
+      <span class="tag">Religio Medici 1643</span>
+      <span class="tag route">Norwich</span>
+    </div>
+    <div>
+      <h3>Religio Medici · Hydriotaphia · A Letter to a Friend</h3>
+      <p class="byline">Sir Thomas Browne · 1605–1682</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Three shorter works in one volume. <em>Religio Medici</em> is a physician's private account of his own faith, circulated in manuscript and printed without permission in 1642 before he authorised an edition in 1643. <em>Hydriotaphia, or Urn Burial</em> (1658) begins with some Roman funerary urns dug up in Norfolk and ends, five chapters later, somewhere near the limits of what English prose can do about death. The <em>Letter to a Friend</em> describes a patient dying of consumption.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A Norwich doctor with degrees from Oxford, Montpellier, Padua and Leiden, who also wrote <em>Pseudodoxia Epidemica</em> (1646) — a systematic examination of widely believed claims, tested against reason, authority and, where possible, experiment. He coined a startling number of English words, including "electricity" and "hallucination."</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>Browne is the model of a mind that can hold scepticism and wonder simultaneously without letting either win. <em>Pseudodoxia</em> is a debunking project; <em>Urn Burial</em> is an argument that the vast majority of human lives are unrecoverable and that this is the ordinary condition of the past. The same person wrote both, and they are the same instinct pointed in two directions.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p><em>Pseudodoxia Epidemica</em> is fact-checking in 1646 — the method, the tone, the problem of what to do when a claim is popular, useful and false. And <em>Urn Burial</em> is the finest prose in the language on the subject of what does not survive.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">All three · Project Gutenberg #586</span><a href="https://www.gutenberg.org/ebooks/586">gutenberg.org/ebooks/586</a></p>
+        <p class="read"><span class="kind">Collected writings incl. The Garden of Cyrus</span><a href="https://archive.org/details/religiomedicioth00browiala">archive.org/details/religiomedicioth00browiala</a></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- White -->
+  <article class="entry">
+    <div class="spine">
+      <div class="year">17<span>89</span></div>
+      <span class="tag">~300 editions since</span>
+      <span class="tag route">One Hampshire parish</span>
+    </div>
+    <div>
+      <h3>The Natural History and Antiquities of Selborne</h3>
+      <p class="byline">Gilbert White · 1720–1793</p>
+
+      <div class="field">
+        <span class="field-label">The book</span>
+        <p>Letters to two fellow naturalists, Thomas Pennant and Daines Barrington, on the wildlife, plants, weather and seasonal rhythms of a single Hampshire village — plus a Naturalist's Calendar recording the first appearance each year of particular birds, insects and flowers. Some of the letters were never posted; White wrote them for the book. A second volume covers the village's antiquities and is rarely reprinted.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">The author</span>
+        <p>A curate who lived almost his entire life in the parish he was born in, and made that the method rather than the limitation. Where his contemporaries were classifying specimens shipped back from the tropics, White watched the same hedgerow for forty years and worked out that swallows migrate rather than hibernate in mud, which was then a live question.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">What it means</span>
+        <p>The founding argument for depth over range. White's discoveries came from repetition and duration — the same few square miles, recorded continuously, until patterns emerged that no single expedition could have caught. It is also, quietly, the first sustained work of phenology and an early contribution to ecology.</p>
+      </div>
+
+      <div class="field">
+        <span class="field-label">Why it still matters</span>
+        <p>His records are still used: a continuous, dated eighteenth-century baseline for when things bloomed and arrived, against which current shifts can be measured. Very few observers have produced data that remained useful for two hundred and forty years. He did it by staying put and writing it down every day.</p>
+      </div>
+
+      <div class="reads">
+        <span class="field-label">Read it free</span>
+        <p class="read"><span class="kind">Full text · Project Gutenberg #1408</span><a href="https://www.gutenberg.org/ebooks/1408">gutenberg.org/ebooks/1408</a></p>
+        <p class="read"><span class="kind">Vol. 2 · the antiquities</span><a href="https://www.gutenberg.org/ebooks/20934">gutenberg.org/ebooks/20934</a></p>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer class="wrap">
+  <h2>Notes on reading these</h2>
+  <p>The <span style="font-family:var(--mono);font-size:.85em">_djvu.txt</span> links — Della Valle, Moryson, Coryat — are raw OCR. They are searchable, which is the point, but they carry scanning errors. If a passage looks garbled, open the "Read Online" page-image viewer on the same Internet Archive item and check it against the scan.</p>
+  <p>Peacham and the Olearius folio are photographic facsimiles set in seventeenth-century type, complete with the long <em>ſ</em>. They read considerably slower than the Gutenberg texts. If the goal is to read rather than to consult, start with Lithgow, Burton, Browne, Wollstonecraft or White — all clean, modern-typeset, and free in full.</p>
+  <p>Three entries here are worth buying instead of downloading: Evliya Çelebi in the Dankoff &amp; Kim selection, Bashō in almost any modern translation, and Cardano in the 2002 reissue with Anthony Grafton's introduction, if you want the scholarship. The free versions are complete and legal; they are just older.</p>
+  <p class="colophon">Thirteen titles · 1575–1796 · compiled August 2026 · all links verified at time of compilation</p>
+</footer>
+
+</body>
+</html>
